@@ -1,4 +1,4 @@
-#include <glad/glad.h>  // musi byæ do³¹czony jako pierwszy
+#include <glad/glad.h>  // musi byï¿½ doï¿½ï¿½czony jako pierwszy
 #include <GLFW/glfw3.h>
 
 #include <iostream>
@@ -137,7 +137,7 @@ int main()
 
     Shader shader("basic.vert", "basic.frag");
 
-    // pêtla zdarzeñ
+    // pï¿½tla zdarzeï¿½
     while (!glfwWindowShouldClose(window))
     {
         // renderowanie

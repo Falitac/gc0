@@ -21,7 +21,7 @@
     <ClCompile Include="Shader.cpp">
       <Filter>Pliki źródłowe</Filter>
     </ClCompile>
-    <ClCompile Include="Main1.cpp">
+    <ClCompile Include="Main3.cpp">
       <Filter>Pliki źródłowe</Filter>
     </ClCompile>
   </ItemGroup>
@@ -40,6 +40,18 @@
       <Filter>Pliki zasobów</Filter>
     </None>
     <None Include="basic.frag">
+      <Filter>Pliki zasobów</Filter>
+    </None>
+    <None Include="basic3.vert">
+      <Filter>Pliki zasobów</Filter>
+    </None>
+    <None Include="basic3.frag">
+      <Filter>Pliki zasobów</Filter>
+    </None>
+    <None Include="basic4.vert">
+      <Filter>Pliki zasobów</Filter>
+    </None>
+    <None Include="basic4.frag">
       <Filter>Pliki zasobów</Filter>
     </None>
   </ItemGroup>

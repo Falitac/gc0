@@ -1,5 +1,8 @@
-#include <glad/glad.h>  // musi byæ do³¹czony jako pierwszy
+#include <glad/glad.h>
 #include <GLFW/glfw3.h>
+#include <glm/glm.hpp>
+#include <glm/gtc/matrix_transform.hpp>
+#include <glm/gtc/type_ptr.hpp>
 
 #define STB_IMAGE_IMPLEMENTATION
 #include <stb_image.h>
@@ -17,6 +20,11 @@ struct Mesh {
         glGenVertexArrays(1, &vao);
         glGenBuffers(1, &vbo);
         glGenBuffers(1, &ebo);
+    }
+    ~Mesh() {
+        glDeleteVertexArrays(1, &vao);
+        glDeleteBuffers(1, &vbo);
+        glDeleteBuffers(1, &ebo);
     }
 
     void passVertices(const std::vector<float>& vertices, const std::vector<uint32_t>& indices) {
@@ -67,6 +75,9 @@ struct Texture {
         glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_NEAREST);
 
         stbi_image_free(data);
+    }
+    ~Texture() {
+		glDeleteTextures(1, &tid);
     }
 
     void use() {
@@ -161,9 +172,10 @@ int main()
     Texture tex0("first.png");
     Texture tex1("second.png");
 
-    Shader shader("basic.vert", "basic.frag");
+    Shader shader("basic2.vert", "basic2.frag");
+    glm::vec3 x{ 1.0f, 2.0f, 2.0f };
 
-    // pêtla zdarzeñ
+    // pï¿½tla zdarzen
     while (!glfwWindowShouldClose(window))
     {
         // renderowanie
